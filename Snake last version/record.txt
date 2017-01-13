@@ -1,0 +1,24 @@
+Player Name :@
+Played Date:Wed Jan 11 17:44:42 2017
+Score:1
+
+Level:10
+___________________________________________________
+Player Name :AAA
+Played Date:Thu Jan 12 16:29:48 2017
+Score:8
+
+Level:10
+___________________________________________________
+Player Name :Aaa
+Played Date:Thu Jan 12 16:30:15 2017
+Score:0
+
+Level:10
+___________________________________________________
+Player Name :Aaaaaaa
+Played Date:Fri Jan 13 19:24:49 2017
+Score:0
+
+Level:10
+___________________________________________________

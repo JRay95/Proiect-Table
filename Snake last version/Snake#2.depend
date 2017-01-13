@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1484222675 source:c:\users\rares\desktop\new folder\snake#2\main.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<ctype.h>
+	<time.h>
+	<windows.h>
+	<process.h>
+
+1484222675 source:c:\users\rares\desktop\snake beta commits\the 7th commit . the last version\main.c
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<ctype.h>
+	<time.h>
+	<windows.h>
+	<process.h>
+
