@@ -18,15 +18,17 @@ int bend_no;
 int len;
 char key;
 void load();
+void record();
 int life;
 void Move();
 void Food();
+void Bonus();
 void Neg();
 int Score();
 void Print();
 void gotoxy(int x, int y);
 void GotoXY(int x,int y);
-void Bend();
+//void Bend();
 void Boarder();
 void Down();
 void Left();
@@ -213,6 +215,79 @@ void Move()
 
     }
 }
+
+void record(){
+   char plname[20],nplname[20],cha,c;
+   int i,j,px;
+   FILE *info;
+   info=fopen("record.txt","a+");
+   getch();
+   system("cls");
+   printf("Enter your name\n");
+   scanf("%[^\n]",plname);
+   //************************
+   for(j=0;plname[j]!='\0';j++){ //to convert the first letter after space to capital
+   nplname[0]=toupper(plname[0]);
+   if(plname[j-1]==' '){
+   nplname[j]=toupper(plname[j]);
+   nplname[j-1]=plname[j-1];}
+   else nplname[j]=plname[j];
+   }
+   nplname[j]='\0';
+   //*****************************
+   //sdfprintf(info,"\t\t\tPlayers List\n");
+   fprintf(info,"Player Name :%s\n",nplname);
+    //for date and time
+
+   time_t mytime;
+  mytime = time(NULL);
+  fprintf(info,"Played Date:%s",ctime(&mytime));
+     //**************************
+     fprintf(info,"Score:%d\n",px=Scoreonly());//call score to display score
+     fprintf(info,"\nLevel:%d\n",10);//call level to display level
+   for(i=0;i<=50;i++)
+   fprintf(info,"%c",'_');
+   fprintf(info,"\n");
+   fclose(info);
+   printf("Wanna see past records press? 'y'\n");
+   cha=getch();
+   system("cls");
+   if(cha=='y'){
+   info=fopen("record.txt","r");
+   do{
+       putchar(c=getc(info));
+       }while(c!=EOF);}
+     fclose(info);
+}
+
+void Bonus()
+{
+    if(head.x==bonus.x&&head.y==bonus.y)
+    {
+         length=length+2;
+        time_t a;
+        a=time(0);
+        srand(a);
+        bonus.x=rand()%70;
+        if(bonus.x<=10)
+            bonus.x+=11;
+        bonus.y=rand()%30;
+        if(bonus.y<=10)
+
+            bonus.y+=11;
+    }
+    else if(bonus.x==0)
+    {
+        bonus.x=rand()%70;
+        if(bonus.x<=10)
+            bonus.x+=11;
+        bonus.y=rand()%30;
+        if(bonus.y<=10)
+            bonus.y+=11;
+    }
+}
+
+
 
 void gotoxy(int x, int y)
 {
